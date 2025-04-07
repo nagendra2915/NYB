@@ -40,11 +40,11 @@ console.log("P **= 3: " + P); // 2 ** 3 = 8
 let u = 29;
 let n = 15;
 console.log("\n Comparison Operators:");
-console.log("Is u equal to n? " + (u == n));  // false
-console.log("Is u not equal to n? " + (u != n)); // true
-console.log("Is u greater than n? " + (u > n));  // true
-console.log("Is u less than n?" + (u < n));//false
-console.log("Is u greater than or equal to n?",+ (u >= n)); //true
-console.log("Is u less than or equal to n? " + (u <= n)); // false
-console.log("Is u strictly equal to n? " + (u === n)); // false
-console.log("Is u strictly not equal to n? " + (u !== n)); // true
+console.log(" u equal to n? " + (u == n));  // false
+console.log(" u not equal to n? " + (u != n)); // true
+console.log(" u greater than n? " + (u > n));  // true
+console.log(" u less than n?" + (u < n));//false
+console.log(" u greater than or equal to n?",+ (u >= n)); //true
+console.log(" u less than or equal to n? " + (u <= n)); // false
+console.log(" u strictly equal to n? " + (u === n)); // false
+console.log(" u strictly not equal to n? " + (u !== n)); // true
