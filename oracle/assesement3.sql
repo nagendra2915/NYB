@@ -1,0 +1,29 @@
+CREATE TABLE Employees (
+    Emp_ID NUMBER PRIMARY KEY,
+    Emp_Name VARCHAR2(100),
+    Salary NUMBER,
+    DOJ DATE,
+    Manager_ID NUMBER,
+    Dept_ID NUMBER
+);
+INSERT INTO Employees VALUES (101, 'Ruturaj', 28000, TO_DATE('2019-03-15', 'YYYY-MM-DD'), NULL, 10);
+INSERT INTO Employees VALUES (102, 'Rachin', 35000, TO_DATE('2018-07-23', 'YYYY-MM-DD'), 101, 20);
+INSERT INTO Employees VALUES (103, 'Convey', 22000, TO_DATE('2021-01-10', 'YYYY-MM-DD'), 101, 10);
+INSERT INTO Employees VALUES (104, 'Dube', 29000, TO_DATE('2020-06-18', 'YYYY-MM-DD'), NULL, 30);
+INSERT INTO Employees VALUES (105, 'shankar', 40000, TO_DATE('2017-11-02', 'YYYY-MM-DD'), 102, 20);
+INSERT INTO Employees VALUES (106, 'Dhoni', 27000, TO_DATE('2022-09-25', 'YYYY-MM-DD'), 101, 10);
+INSERT INTO Employees VALUES (107, 'Jadeja', 31000, TO_DATE('2016-12-01', 'YYYY-MM-DD'), NULL, 30);
+INSERT INTO Employees VALUES (108, 'Noor', 25000, TO_DATE('2023-04-04', 'YYYY-MM-DD'), 103, 10);
+SELECT * 
+FROM Employees 
+WHERE DOJ >= ADD_MONTHS(SYSDATE, -60);
+
+SELECT Emp_ID, Emp_Name, Salary, (Salary * 12) AS Annual_Salary
+FROM Employees;
+
+SELECT Emp_ID, Emp_Name, ROUND(MONTHS_BETWEEN(SYSDATE, DOJ)/12, 2) AS Years_of_Service
+FROM Employees;
+
+UPDATE Employees
+SET Salary = Salary * 1.10
+WHERE Salary < 30000;
