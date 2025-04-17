@@ -8,6 +8,14 @@ function goodmorning()
 }
 goodmorning();
 
+//
+
+function environment()
+{
+    console.log("Save Trees , Save Earth")
+}
+environment();
+
 //2.Functions with multiple parameters
 
 function product(n,u)
@@ -16,6 +24,14 @@ function product(n,u)
 }
 console.log(product(29,15));
 
+//
+
+function division(p,q)
+{
+    return p/q ;
+}
+console.log(division(500,5));
+
 //3.Function that returns a boolean
 
 function odd(num)
@@ -23,6 +39,15 @@ function odd(num)
     return num % 2 === 1;
 }
 console.log(odd(29));
+console.log(odd(38));
+
+//
+function even(n)
+{
+    return n % 2 === 0;
+}
+console.log(even(98));
+console.log(even(29));
 
 //4.Function with conditional statemnts
 
@@ -40,6 +65,7 @@ function forVote(age)
 console.log(forVote(29));
 console.log(forVote(15));
 
+
 //5.Function calling another function
 
 function add(n, u) 
@@ -53,8 +79,8 @@ function add(n, u)
     console.log(`The sum is ${result}`);
   }
   
-  displaySum(10, 5); 
-
+  displaySum(10, 5);
+  
   //6.Function that work with arrays
 
   function getElement(arr) 
