@@ -1,56 +1,56 @@
-//objects
-const carProfile = 
+//objects - it is a collection of key-value pairs called as properties 
+//Creation of an object 
+
+//-->1.object literal way - simple and direct way
+let phone = 
 {
-    id: "CAR2098",
-    brand: "Mercedes-Benz",
-    model: "C-Class",
-    year: 2022,
-    color: "Obsidian Black",
-    variant: "C300 4MATIC",
-    price: 843950,
-    mileage: 14,
-    fuelType: "Petrol",
-    transmission: "Automatic",
-    owner: 
+    name: "Iphone16",
+    mobile : function()
     {
-      name: "TARAKA RAMARAO",
-      contact: "tarak9999@example.com",
-      city: "Hyderabad"
-    },
-    features:
-      [ "Panoramic Sunroof",
-      "Heated and Ventilated Seats",
-      "Ambient Lighting",
-      "MBUX Voice Control System",
-      "Apple CarPlay & Android Auto",
-      "360° Camera",
-      "Blind Spot Assist",
-      "Wireless Charging",
-      "Harman Kardon sound system" ],
-       isAvailable: true,
-  
-    displayProfile() {
-      console.log("--- Car Profile ---");
-      console.log(`ID: ${this.id}`);
-      console.log(`Brand: ${this.brand}`);
-      console.log(`Model: ${this.model} (${this.year})`);
-      console.log(`Variant: ${this.variant}`);
-      console.log(`Color: ${this.color}`);
-      console.log(`Fuel Type: ${this.fuelType}`);
-      console.log(`Transmission: ${this.transmission}`);
-      console.log(`Mileage: ${this.mileage} km`);
-      console.log(`Price: $${this.price}`);
-      console.log(`Availability: ${this.isAvailable ? "Available" : "Not Available"}`);
-      console.log("\n Features:");
-      this.features.forEach((feature, index) => 
-      {
-        console.log(`${index + 1}. ${feature}`);
-      });
-      console.log("\n Owner Info:");
-      console.log(`  Name: ${this.owner.name}`);
-      console.log(`  Contact: ${this.owner.contact}`);
-      console.log(`  City: ${this.owner.city}`);
+        console.log("This is my " +this.name);
     }
-  };
-  carProfile.displayProfile();
+};
+phone.mobile();
+
+//-->2.Factory function way - a function that returns a new object
+function createCar(make, model) 
+{
+    return {
+      make,
+      model,
+      display: function() {
+        console.log("Assemble the " + make + " " + model);
+      }
+    };
+  }
+  let car1 = createCar("wolksvagen", "virtus");
+  car1.display();
+  
+//-->3.Constructor Function way - uses this and new keywords to create object
+
+function movie(name,director){
+    this.name = name;
+    this.director = director;
+    this.film = function(){
+        console.log("The "  +this.name+  " movie was directed by "  +this.director);
+    };
+}
+let m1 = new movie("Interstellar","Christopher Nolan");
+m1.film();
+
+//4.Classical Way - uses the class keyword
+
+class Student {
+    constructor(name, grade) {
+      this.name = name;
+      this.grade = grade;
+    }
+  
+    details() {
+      console.log(this.name + " is in grade " + this.grade);
+    }
+  }
+  
+  let s1 = new Student("Rashid", 10);
+  s1.details();
   
