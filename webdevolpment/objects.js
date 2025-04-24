@@ -41,7 +41,8 @@ m1.film();
 //4.Classical Way - uses the class keyword
 
 class Student {
-    constructor(name, grade) {
+    constructor(name, grade) 
+    {
       this.name = name;
       this.grade = grade;
     }
@@ -50,7 +51,6 @@ class Student {
       console.log(this.name + " is in grade " + this.grade);
     }
   }
-  
   let s1 = new Student("Rashid", 10);
   s1.details();
   
