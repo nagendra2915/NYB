@@ -23,5 +23,16 @@ const car = {
   Object.keys(car).forEach((key) => {
     console.log(key, car[key]);
   });
+  //For..in with object.keys()
+
+  const user = {
+    name: "surya",
+    email: "surya@example.com",
+    role: "ASE"
+  };
+  
+  for (const key of Object.keys(user)) {
+    console.log(`${key}: ${user[key]}`);
+  }
   
   
